@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 @RestController
 
@@ -16,8 +17,8 @@ public class Controller {
     }
 
     @GetMapping("/age")
-    public int age(){
-        return 21;
+    public String age(){
+        return "21";
     }
 
     @GetMapping("/check/status")
@@ -31,11 +32,15 @@ public class Controller {
     }
 
     @GetMapping("/names")
-    public String [] names(){
+    public ArrayList<String> names(){
 
-        String [] array = {"yasir","fahad","abdullah","mohammed"};
+        ArrayList<String> names = new ArrayList<>();
+        names.add("yasir");
+        names.add("fahad");
+        names.add("abdullah");
+        names.add("mohammed");
 
-        return array;
+        return names;
     }
 
 
